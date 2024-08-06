@@ -111,7 +111,8 @@ if __name__ == "__main__":
     print("Done!")
 
     # Save model
-    torch.save(model.state_dict(), "model_weights.pth")
+    # Uncomment to run
+    #torch.save(model.state_dict(), "model_weights.pth")
 
     # Finalize ClearML Task
     task.close()

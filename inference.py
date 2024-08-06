@@ -2,7 +2,7 @@ import torch
 from torch.utils.data import DataLoader
 from preprocess import split_data, get_transforms
 from get_data import PcPartsData
-from train import ImprovedNeuralNet
+from train import ConvNet
 from clearml import Task
 
 # ClearML task setup
@@ -33,10 +33,11 @@ if __name__ == "__main__":
     test_loader = DataLoader(test_data, batch_size=16, shuffle=False)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = ImprovedNeuralNet().to(device).float()
+    model = ConvNet().to(device).float()
 
     # Load the trained model weights
-    model.load_state_dict(torch.load("model_weights.pth",weights_only=True))
+    # Uncomment to run
+    # model.load_state_dict(torch.load("model_weights.pth",weights_only=True))
     model.eval()
 
     predictions = predict(model, test_loader)
