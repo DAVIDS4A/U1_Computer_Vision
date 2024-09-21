@@ -1,6 +1,6 @@
 # 🌟 U1 Computer Vision Project 🌟
 
-This repository contains the code and resources for the **U1 Computer Vision** project. The goal of this project is to classify various PC parts using a convetional deep learning technique(CNN) and a pre-trained CV model (YOLOv8n).
+This repository contains the code and resources for the **U1 Computer Vision** project. The goal of this project is to classify various PC parts using a conventional deep learning technique(CNN) and a pre-trained CV model (YOLOv8n).
 
 ## 📋 Project Overview
 
